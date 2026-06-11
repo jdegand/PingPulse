@@ -1,0 +1,8 @@
+bin/
+obj/
+*.user
+*.db
+*.mdf
+*.ldf
+.vscode/
+.idea/

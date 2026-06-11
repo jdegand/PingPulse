@@ -1,0 +1,59 @@
+## Core .NET Artifacts
+bin/
+obj/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.usermd
+*.userprefs
+*.sln.docstates
+
+## Roslyn compiler caches
+*.ide/
+
+## Rider and JetBrains IDEs
+.idea/
+*.sln.iml
+
+## Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+
+## Visual Studio cache and temporary files
+.vs/
+Generated Files/
+_ReSharper*/
+
+## Publishing and deployment output
+*.publish.htm
+*.azurepubxml
+*.pubxml
+*.pubxml.user
+
+## Testing artifacts
+TestResults/
+*.sequenced
+
+## Node / Frontend assets (if using Angular/React templates)
+node_modules/
+.ntvs_analysis.dat
+*.njsproj
+
+## Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+## --- SECURITY / LOCAL CONFIGURATION ---
+# Secrets and environment configurations
+.env
+.env.local
+.env.*.local
+appsettings.Development.json
+appsettings.Local.json
+
+# Exclude user secrets folder if copied locally
+secrets.json
