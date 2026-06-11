@@ -63,15 +63,19 @@
     1. Connect to the SQL Server container
 
         ```bash
-        sudo docker exec -it sql_server_hub /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "YourPassword123!"
+        sudo docker exec -it sql_server_hub /opt/mssql-tools/bin/sqlcmd \
+        -S localhost -U sa -P "YourStrongPassword123!" -C \
+        -Q "SELECT * FROM NotificationHub.dbo.Notifications;"
         ```
 
-    1. Check the database
+    1. Check the database interactively
+
+        ```bash
+        sudo docker exec -it sql_server_hub /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "YOUR_CORRECT_PASSWORD" -C
+        ```
 
         ```sql
         USE PingPulse;
-        GO
-
         SELECT TOP 20 * FROM GitHubEvents ORDER BY ReceivedAt DESC;
         GO
         ```
