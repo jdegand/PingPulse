@@ -71,11 +71,12 @@
     1. Check the database interactively
 
         ```bash
-        sudo docker exec -it sql_server_hub /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "YOUR_CORRECT_PASSWORD" -C
+        sudo docker exec -it sql_server_hub /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "YourStrongPassword123!" -C
         ```
 
         ```sql
-        USE PingPulse;
-        SELECT TOP 20 * FROM GitHubEvents ORDER BY ReceivedAt DESC;
+        USE NotificationHub;
+        GO
+        SELECT TOP 20 * FROM Notifications ORDER BY ReceivedAt DESC;
         GO
         ```
