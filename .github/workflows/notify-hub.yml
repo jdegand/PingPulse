@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Send JSON Payload to API via Pinggy
         env:
-          TARGET_URL: ${{ secrets.PINGGY_URL }}
+          TARGET_URL: ${{ secrets.PINGGY_URL }}/webhook
         run: |
           curl -X POST "$TARGET_URL" \
           -H "Content-Type: application/json" \

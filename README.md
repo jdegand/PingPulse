@@ -52,10 +52,16 @@
 
 1. Verify the Data Reached Your Local SQL Server
 
+    1. View the API Logs
+
+    ```bash
+    sudo docker logs --tail 30 dotnet_webhook_api
+    ```
+
     1. Connect to the SQL Server container
 
         ```bash
-        sudo docker exec -it pingpulse-sql /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "YourPassword123!"
+        sudo docker exec -it sql_server_hub /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "YourPassword123!"
         ```
 
     1. Check the database
